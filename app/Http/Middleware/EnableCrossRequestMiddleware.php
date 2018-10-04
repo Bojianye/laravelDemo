@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Middleware;
 use Closure;
+
 class EnableCrossRequestMiddleware
 {
     /**
@@ -15,7 +16,7 @@ class EnableCrossRequestMiddleware
         $response = $next($request);
         $origin = $request->server('HTTP_ORIGIN') ? $request->server('HTTP_ORIGIN') : '';
         $allow_origin = [
-            'http://localhost:8000',
+            'http://localhost:3000',
             '*'
         ];
         if (in_array($origin, $allow_origin)) {
