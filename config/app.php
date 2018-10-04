@@ -160,7 +160,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Thujohn\Twitter\TwitterServiceProvider::class,
-        Barryvdh\Cors\ServiceProvider::class,
         /*
          * Package Service Providers...
          */
