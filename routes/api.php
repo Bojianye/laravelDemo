@@ -21,3 +21,15 @@ Route::get('/timeline/{user?}', function($user = 'thujohn')
 {
     return Twitter::getUserTimeline(['screen_name' => $user, 'count' => 20, 'format' => 'json']);
 });
+
+Route::get('/list/{user?}', function ($user = 'thujohn'){
+   return Twitter::getHomeTimeline();
+});
+
+
+Route::get('/tweet/{id?}', function ($id = null){
+    if (!$id){
+        return [];
+    }
+    return Twitter::getTweet($id, ['format' => 'json']);
+});
